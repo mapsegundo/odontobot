@@ -1,10 +1,20 @@
-# Odontobot
+# **OdontoBot**
 
-Odontobot é um projeto destinado a automatizar operações de clínicas odontológicas. Este README fornece uma visão geral do projeto, instruções de configuração e diretrizes de uso.
+## **Visão Geral**
+OdontoBot é um projeto desenvolvido para estudo e pesquisa, voltado para pessoas interessadas na área da odontologia. O principal objetivo é fornecer informações, suporte técnico e educacional sobre diversos tópicos odontológicos de maneira automatizada e acessível. Este bot utiliza inteligência artificial para responder dúvidas, ajudar estudantes, profissionais e entusiastas, e explorar conceitos relacionados à odontologia.
 
-## Visão Geral
+## **Principais Funcionalidades**
+- **Respostas Automatizadas:** Utilize inteligência artificial (GPT) para responder dúvidas odontológicas.
+- **Interface Intuitiva:** Design responsivo e amigável, com exibição organizada das respostas em formato HTML estilizado.
+- **Personalização e Estudo:** Perfeito para quem deseja aprender ou aprofundar conhecimentos na área odontológica.
+- **Foco Educacional:** Explicações claras e objetivas sobre tópicos como diagnósticos, tratamentos, prevenção e reabilitação oral.
+- **Flexibilidade:** Integrado a tecnologias modernas para personalização e expansibilidade.
 
-Odontobot é uma aplicação React que utiliza a API da OpenAI para responder a dúvidas odontológicas de forma clara e educacional. A aplicação inclui uma interface de usuário simples com um campo de entrada para perguntas e uma área para exibir as respostas geradas.
+## **Público-Alvo**
+- Estudantes de odontologia.
+- Profissionais da área odontológica.
+- Entusiastas interessados em aprender mais sobre saúde bucal.
+- Pesquisadores explorando a aplicação de inteligência artificial na odontologia.
 
 ## Estrutura do Projeto
 
