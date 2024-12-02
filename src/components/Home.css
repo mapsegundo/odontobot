@@ -166,3 +166,13 @@ main {
   text-align: center;
   padding: 0.5rem 0;
 }
+
+.footer a {
+  color: #00dbff; /* Cor do link */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ffffff; /* Cor ao passar o mouse */
+  text-decoration: underline; /* Adiciona sublinhado no hover */
+}

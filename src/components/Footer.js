@@ -8,6 +8,17 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} OdontoBot. Todos os direitos
           reservados.
         </span>
+        <p>
+          Desenvolvido por{" "}
+          <a
+            href="https://www.linkedin.com/in/marshallpaiva"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Marshall Paiva
+          </a>
+          .
+        </p>
       </div>
     </footer>
   );
