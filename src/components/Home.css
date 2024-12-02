@@ -153,11 +153,12 @@
 }
 
 main {
-  margin-bottom: 2rem; /* Ajuste o valor conforme necessário */
+  padding-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .footer {
-  position: relative;
+  position: fixed;
   bottom: 0;
   width: 100%;
   background-color: #282c34;

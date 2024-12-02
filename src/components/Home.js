@@ -67,12 +67,9 @@ const Home = () => {
         presence_penalty: 0.0,
       });
 
-      console.log("Resposta da API:", response.data);
       setDuvida(response.data.choices[0].message.content);
       toast.success("Resposta gerada com sucesso!");
     } catch (error) {
-      console.error("Erro ao chamar a API da OpenAI:", error);
-
       if (error.response) {
         toast.error(
           `Erro da API: ${error.response.status} - ${error.response.data.error.message}`
