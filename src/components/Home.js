@@ -9,8 +9,8 @@ const { Configuration, OpenAIApi } = require("openai");
 
 const Home = () => {
   const [isProcessing, setIsProcessing] = useState(false);
-  const [odonto, setOdonto] = useState("");
-  const [duvida, setDuvida] = useState("");
+  const [entrada, setEntrada] = useState("");
+  const [saida, setSaida] = useState("");
 
   const configuration = new Configuration({
     apiKey: process.env.REACT_APP_OPENAI_API_KEY,
@@ -27,12 +27,12 @@ const Home = () => {
   const getDuvida = async (e) => {
     e.preventDefault();
 
-    if (isProcessing || !isValidInput(odonto)) {
+    if (isProcessing || !isValidInput(entrada)) {
       toast.error("Entrada inválida. Por favor, revise sua dúvida.");
       return;
     }
 
-    setDuvida("");
+    setSaida("");
     setIsProcessing(true);
 
     try {
@@ -56,7 +56,7 @@ const Home = () => {
           {
             role: "user",
             content: `
-                Tenho uma dúvida odontológica: ${odonto}. Por favor, organize sua resposta como um conteúdo HTML bem formatado.
+                Tenho uma dúvida odontológica: ${entrada}. Por favor, organize sua resposta como um conteúdo HTML bem formatado.
                 `,
           },
         ],
@@ -67,7 +67,7 @@ const Home = () => {
         presence_penalty: 0.0,
       });
 
-      setDuvida(response.data.choices[0].message.content);
+      setSaida(response.data.choices[0].message.content);
       toast.success("Resposta gerada com sucesso!");
     } catch (error) {
       if (error.response) {
@@ -92,7 +92,8 @@ const Home = () => {
           <section className="text-center">
             <h1 className="m-4">Precisa de ajuda?</h1>
             <p className="pt-5">
-              Digite sua dúvida e o <b>OdontoBot</b> vai te ajudar!
+              Digite sua dúvida sobre Odontologia e o <b>OdontoBot</b> vai te
+              ajudar!
             </p>
           </section>
 
@@ -102,11 +103,11 @@ const Home = () => {
                 className="shadow-none form-control w-75 mx-auto rounded textareaInput"
                 placeholder="Digite aqui"
                 style={{ height: "100px" }}
-                onChange={(e) => setOdonto(e.target.value)}
+                onChange={(e) => setEntrada(e.target.value)}
               ></textarea>
               <button
                 type="submit"
-                className="btn vw-50 btn-lg text-center m-3 duvidaButton"
+                className="btn vw-50 btn-lg text-center m-3 saidaButton"
                 disabled={isProcessing}
               >
                 {isProcessing ? "Processando..." : "Enviar"}
@@ -124,7 +125,7 @@ const Home = () => {
 
           {/* Resposta Gerada */}
           <section>
-            {duvida && <div className="odonto">{parse(duvida)}</div>}
+            {saida && <div className="odonto">{parse(saida)}</div>}
           </section>
         </div>
       </main>

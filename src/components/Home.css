@@ -114,13 +114,13 @@
 }
 
 /* Botões */
-.duvidaButton {
+.saidaButton {
   background-color: black;
   color: #00dbff;
   transition: all 0.3s ease;
 }
 
-.duvidaButton:hover {
+.saidaButton:hover {
   background-color: #00dbff;
   color: black;
 }
