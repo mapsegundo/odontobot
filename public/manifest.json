@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "OdontoBot",
+  "name": "OdontoBot - Assistente Odontológico",
   "icons": [
     {
       "src": "odontobot.ico",
@@ -8,18 +8,27 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "odonto.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "odonto.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "maskable_icon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#00dbff",
+  "background_color": "#000000",
+  "description": "OdontoBot é seu assistente virtual odontológico para estudo e pesquisa, ajudando a responder dúvidas odontológicas de forma prática e interativa.",
+  "lang": "pt-BR",
+  "orientation": "portrait"
 }

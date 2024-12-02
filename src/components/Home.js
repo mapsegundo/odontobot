@@ -92,7 +92,7 @@ const Home = () => {
           <section className="text-center">
             <h1 className="m-4">Precisa de ajuda?</h1>
             <p className="pt-5">
-              "Digite sua dúvida e o <b>OdontoBot</b> vai te ajudar!"
+              Digite sua dúvida e o <b>OdontoBot</b> vai te ajudar!
             </p>
           </section>
 
