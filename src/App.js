@@ -1,8 +1,9 @@
-import "./App.css";
+import "./assets/styles/App.css";
 import Home from "./components/Home";
+
 function App() {
   return (
-    <div className="" style={{ backgroundColor: "#F6F4F9" }}>
+    <div className="app-container">
       <Home />
     </div>
   );
