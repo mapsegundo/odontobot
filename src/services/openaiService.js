@@ -19,7 +19,6 @@ export const getOpenAIResponse = async (entrada) => {
           - Explicações ou detalhes em parágrafos (<p>).
           - Exemplos práticos ou situações do dia a dia relevantes para a dúvida.
           - Links para fontes confiáveis (<a>), com indicação de abertura em uma nova aba (target="_blank").
-          - Links de vídeos do youtube (<a>), com indicação de abertura em uma nova aba (target="_blank").
           - Uma conclusão que resuma a informação e sugira os próximos passos.
           Formate o conteúdo dentro de uma <div> com a classe "odonto".
         `,
