@@ -1,24 +1,27 @@
 .download-button {
   background-color: var(--brand-primary) !important;
   border-color: var(--brand-primary) !important;
-  color: white;
+  color: white !important;
   font-weight: 500;
-  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 8px;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(44, 123, 229, 0.3);
-  min-width: 140px;
+  box-shadow: 0 2px 5px rgba(44, 123, 229, 0.3) !important;
+  min-width: 120px;
+  border: none;
+  cursor: pointer;
 }
 
 .download-button:hover {
   background-color: var(--brand-secondary) !important;
   border-color: var(--brand-secondary) !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(44, 123, 229, 0.4);
+  box-shadow: 0 4px 8px rgba(44, 123, 229, 0.4) !important;
 }
 
 .dark-mode .download-button {
   background-color: var(--brand-primary) !important;
   border-color: var(--brand-primary) !important;
-  color: white;
+  color: white !important;
 }
