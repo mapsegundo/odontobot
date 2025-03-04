@@ -10,8 +10,8 @@
   --bg-secondary: #f8f9fa;
   --text-primary: #212529;
   --text-secondary: #6c757d;
-  --brand-primary: #0dcaf0;
-  --brand-secondary: #0b96b3;
+  --brand-primary: #2c7be5;
+  --brand-secondary: #1a68d1;
   --accent: #0062cc;
   --border-color: #dee2e6;
   --box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
@@ -20,7 +20,7 @@
   --input-border: #ced4da;
   --navbar-bg: #f8f9fa;
   --navbar-text: #212529;
-  --navbar-active: #0dcaf0;
+  --navbar-active: #2c7be5;
 }
 
 .dark-mode {
@@ -28,9 +28,9 @@
   --bg-secondary: #1e1e1e;
   --text-primary: #f8f9fa;
   --text-secondary: #d0d0d0;
-  --brand-primary: #0dcaf0;
-  --brand-secondary: #0b96b3;
-  --accent: #0dcaf0;
+  --brand-primary: #2c7be5;
+  --brand-secondary: #1a68d1;
+  --accent: #2c7be5;
   --border-color: #495057;
   --box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
   --input-bg: #2d2d2d;
@@ -38,7 +38,7 @@
   --input-border: #495057;
   --navbar-bg: #1e1e1e;
   --navbar-text: #f8f9fa;
-  --navbar-active: #0dcaf0;
+  --navbar-active: #2c7be5;
 }
 
 body {
@@ -66,20 +66,31 @@ main {
   padding: 20px;
   margin: 20px 0;
   border-radius: 8px;
-  background-color: var(--response-bg);
-  color: var(--response-text);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   box-shadow: var(--box-shadow);
+  border-left: 4px solid var(--brand-primary);
 }
 
 .odonto h1 {
-  color: var(--response-heading);
+  color: var(--brand-primary);
   margin-bottom: 20px;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--brand-primary);
 }
 
 .odonto h2 {
-  color: var(--response-heading);
+  color: var(--brand-primary);
   margin-top: 25px;
   margin-bottom: 15px;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--brand-secondary);
+}
+
+.odonto h3 {
+  color: var(--brand-secondary);
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .odonto p {
@@ -114,7 +125,8 @@ main {
 }
 
 .textareaInput:focus {
-  border: 2px solid var(--input-focus-border);
+  border: 2px solid var(--brand-primary);
+  box-shadow: 0 0 0 0.2rem rgba(44, 123, 229, 0.25);
 }
 
 .saidaButton {
@@ -188,11 +200,26 @@ main {
 .btn-primary {
   background-color: var(--brand-primary);
   border-color: var(--brand-primary);
+  box-shadow: 0 2px 4px rgba(44, 123, 229, 0.3);
 }
 
 .btn-primary:hover {
   background-color: var(--brand-secondary);
   border-color: var(--brand-secondary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(44, 123, 229, 0.4);
+}
+
+.send-button {
+  background-color: var(--brand-primary) !important;
+  color: white;
+  box-shadow: 0 2px 4px rgba(44, 123, 229, 0.3) !important;
+}
+
+.send-button:hover:not(:disabled) {
+  background-color: var(--brand-secondary) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(44, 123, 229, 0.4) !important;
 }
 
 /* Fix para contrastes em menus escuros */

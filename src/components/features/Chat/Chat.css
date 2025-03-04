@@ -50,6 +50,8 @@
   margin-right: auto;
   border-radius: 0 12px 12px 12px;
   border-left: 4px solid var(--brand-primary);
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .odonto h1 {
@@ -59,6 +61,7 @@
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--brand-primary);
+  font-weight: 600;
 }
 
 .odonto h2 {
@@ -68,6 +71,7 @@
   margin-bottom: 0.75rem;
   padding-bottom: 0.25rem;
   border-bottom: 1px solid var(--brand-secondary);
+  font-weight: 500;
 }
 
 .odonto h3 {
@@ -75,6 +79,7 @@
   font-size: 1.2rem;
   margin-top: 0.75rem;
   margin-bottom: 0.5rem;
+  font-weight: 500;
 }
 
 .odonto img,
@@ -159,13 +164,13 @@
   font-weight: 500;
   font-size: 1rem;
   min-width: 120px;
-  box-shadow: 0 2px 5px rgba(13, 202, 240, 0.3);
+  box-shadow: 0 2px 5px rgba(44, 123, 229, 0.3);
 }
 
 .send-button:hover:not(:disabled) {
   background-color: var(--brand-secondary);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(13, 202, 240, 0.4);
+  box-shadow: 0 4px 8px rgba(44, 123, 229, 0.4);
 }
 
 .send-button:disabled {
