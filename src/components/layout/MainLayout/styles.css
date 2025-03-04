@@ -15,6 +15,7 @@
 .main-layout main {
   flex: 1;
   padding-top: 80px;
+  padding-bottom: var(--spacing-lg);
   min-height: calc(100vh - 150px);
   display: flex;
   flex-direction: column;
@@ -38,6 +39,7 @@
 @media (max-width: 768px) {
   .main-layout main {
     padding-top: 70px;
+    padding-bottom: var(--spacing-md);
     padding-left: var(--spacing-sm);
     padding-right: var(--spacing-sm);
   }

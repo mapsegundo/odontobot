@@ -3,7 +3,7 @@ import "./styles.css";
 
 const Help = () => {
   return (
-    <div className="container">
+    <div className="help-page container-centered">
       <div className="help-container">
         <h1 className="text-center mb-4">Como usar o OdontoBot</h1>
 

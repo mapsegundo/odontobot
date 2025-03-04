@@ -1,10 +1,20 @@
+.help-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: var(--spacing-md) 0;
+}
+
 .help-container {
   max-width: var(--content-width-lg);
-  margin: 0 auto;
+  margin: var(--spacing-xl) auto;
   padding: var(--spacing-lg);
   border-radius: 12px;
   box-shadow: var(--shadow-lg);
   transition: all 0.3s ease;
+  background-color: var(--bg-primary);
+  width: 100%;
 }
 
 .help-section {
@@ -125,6 +135,7 @@
 /* Responsividade */
 @media (max-width: 768px) {
   .help-container {
+    margin: var(--spacing-lg) auto;
     padding: var(--spacing-md);
     border-radius: 8px;
     box-shadow: var(--shadow-md);
