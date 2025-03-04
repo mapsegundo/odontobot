@@ -108,11 +108,10 @@ main {
 .odonto {
   padding: var(--spacing-md);
   margin: var(--spacing-md) 0;
-  border-radius: 8px;
+  border-radius: 12px;
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  box-shadow: var(--shadow-sm);
-  border-left: 4px solid var(--brand-primary);
+  box-shadow: var(--shadow-md);
 }
 
 .odonto h1 {

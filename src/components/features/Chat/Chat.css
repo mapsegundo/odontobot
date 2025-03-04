@@ -49,12 +49,11 @@
   align-self: flex-start;
   padding: var(--spacing-md);
   margin: var(--spacing-md) 0;
-  border-radius: 12px 12px 12px 0;
+  border-radius: 12px;
   background-color: var(--bg-secondary);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   max-width: 90%;
   width: 90%;
-  border-left: 4px solid var(--brand-primary);
 }
 
 .odonto h1 {
@@ -200,7 +199,7 @@
 /* Tema escuro específico para o chat */
 .dark-mode .odonto {
   background-color: #1e1e1e;
-  border-left: 4px solid var(--brand-primary);
+  box-shadow: var(--shadow-md);
 }
 
 .dark-mode .odonto h1,
