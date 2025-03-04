@@ -1,13 +1,10 @@
+/* Importar temas */
+@import "./themes/light.css";
+@import "./themes/dark.css";
+
 /* Estilos globais */
 :root {
-  --primary-color: #0d6efd;
-  --secondary-color: #6c757d;
-  --success-color: #198754;
-  --info-color: #0dcaf0;
-  --warning-color: #ffc107;
-  --danger-color: #dc3545;
-  --light-color: #f8f9fa;
-  --dark-color: #212529;
+  /* Definição padrão de variáveis, serão substituídas pelos temas */
   --font-family: "Roboto", sans-serif;
 }
 
@@ -16,7 +13,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: var(--light-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .app-container {
@@ -29,22 +28,23 @@ main {
   flex: 1;
 }
 
+/* Estilos da resposta do OdontoBot */
 .odonto {
   padding: 20px;
   margin: 20px 0;
   border-radius: 8px;
-  background-color: #212529;
-  color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--response-bg);
+  color: var(--response-text);
+  box-shadow: var(--box-shadow);
 }
 
 .odonto h1 {
-  color: #0dcaf0;
+  color: var(--response-heading);
   margin-bottom: 20px;
 }
 
 .odonto h2 {
-  color: #0dcaf0;
+  color: var(--response-heading);
   margin-top: 25px;
   margin-bottom: 15px;
 }
@@ -52,7 +52,7 @@ main {
 .odonto p {
   line-height: 1.6;
   margin-bottom: 15px;
-  color: white;
+  color: var(--response-text);
 }
 
 .odonto ul {
@@ -61,16 +61,53 @@ main {
 
 .odonto li {
   margin-bottom: 8px;
-  color: white;
+  color: var(--response-text);
 }
 
 .odonto a {
-  color: #0dcaf0;
+  color: var(--response-link);
   text-decoration: none;
 }
 
 .odonto a:hover {
   text-decoration: underline;
+}
+
+/* Inputs e botões com as variáveis de tema */
+.textareaInput {
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+  color: var(--input-text);
+}
+
+.textareaInput:focus {
+  border: 2px solid var(--input-focus-border);
+}
+
+.saidaButton {
+  background-color: var(--button-primary-bg);
+  color: var(--button-primary-text);
+}
+
+.saidaButton:hover {
+  background-color: var(--button-primary-hover-bg);
+  color: var(--button-primary-text);
+}
+
+/* Navbar e Footer com as variáveis de tema */
+.navbar {
+  background-color: var(--navbar-bg) !important;
+  color: var(--navbar-text);
+  transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+  color: var(--navbar-text) !important;
+}
+
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
 }
 
 /* Estilos responsivos */

@@ -1,0 +1,49 @@
+/* Tema Claro - OdontoBot */
+:root[data-theme="light"] {
+  /* Cores principais */
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --text-primary: #212529;
+  --text-secondary: #495057;
+  --border-color: #dee2e6;
+
+  /* Cores de marca */
+  --brand-primary: #0d6efd;
+  --brand-secondary: #0dcaf0;
+  --brand-accent: #0b9cb8;
+
+  /* Cores de status */
+  --success: #198754;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --info: #0dcaf0;
+
+  /* Efeitos e sombras */
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --hover-opacity: 0.8;
+
+  /* Componentes específicos */
+  --navbar-bg: #ffffff;
+  --navbar-text: #212529;
+  --footer-bg: #f8f9fa;
+  --footer-text: #6c757d;
+
+  /* Resposta do OdontoBot (mantém fundo escuro mesmo no tema claro) */
+  --response-bg: #212529;
+  --response-text: #ffffff;
+  --response-heading: #0dcaf0;
+  --response-link: #0dcaf0;
+
+  /* Formulário */
+  --input-bg: #ffffff;
+  --input-text: #212529;
+  --input-border: #0dcaf0;
+  --input-focus-border: #0b9cb8;
+
+  /* Botões */
+  --button-primary-bg: #0dcaf0;
+  --button-primary-text: #ffffff;
+  --button-primary-hover-bg: #0b9cb8;
+  --button-secondary-bg: #6c757d;
+  --button-secondary-text: #ffffff;
+}
