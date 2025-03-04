@@ -6,6 +6,39 @@
 :root {
   /* Definição padrão de variáveis, serão substituídas pelos temas */
   --font-family: "Roboto", sans-serif;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --brand-primary: #0dcaf0;
+  --brand-secondary: #0b96b3;
+  --accent: #0062cc;
+  --border-color: #dee2e6;
+  --box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --input-bg: #ffffff;
+  --input-text: #212529;
+  --input-border: #ced4da;
+  --navbar-bg: #f8f9fa;
+  --navbar-text: #212529;
+  --navbar-active: #0dcaf0;
+}
+
+.dark-mode {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --text-primary: #f8f9fa;
+  --text-secondary: #d0d0d0;
+  --brand-primary: #0dcaf0;
+  --brand-secondary: #0b96b3;
+  --accent: #0dcaf0;
+  --border-color: #495057;
+  --box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+  --input-bg: #2d2d2d;
+  --input-text: #f8f9fa;
+  --input-border: #495057;
+  --navbar-bg: #1e1e1e;
+  --navbar-text: #f8f9fa;
+  --navbar-active: #0dcaf0;
 }
 
 body {
@@ -15,7 +48,7 @@ body {
   box-sizing: border-box;
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .app-container {
@@ -119,4 +152,114 @@ main {
   .odonto {
     padding: 15px;
   }
+}
+
+/* Estilos específicos para tema escuro */
+.dark-mode .navbar {
+  background-color: var(--navbar-bg) !important;
+  color: var(--navbar-text);
+}
+
+.dark-mode .navbar-dark .navbar-nav .nav-link {
+  color: var(--navbar-text);
+}
+
+.dark-mode .navbar-dark .navbar-nav .nav-link.active {
+  color: var(--navbar-active) !important;
+}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border-color: var(--input-border);
+}
+
+.dark-mode .btn-theme-toggle {
+  color: var(--text-primary);
+}
+
+.dark-mode .btn-theme-toggle i {
+  color: var(--brand-primary);
+}
+
+/* Estilos gerais */
+.btn-primary {
+  background-color: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-secondary);
+  border-color: var(--brand-secondary);
+}
+
+/* Fix para contrastes em menus escuros */
+.dropdown-menu {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+.dropdown-item {
+  color: var(--text-primary);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: rgba(13, 202, 240, 0.1);
+  color: var(--text-primary);
+}
+
+/* Ajustes para forms */
+input,
+textarea,
+select {
+  background-color: var(--input-bg) !important;
+  color: var(--input-text) !important;
+  border-color: var(--input-border) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-secondary) !important;
+  opacity: 0.7;
+}
+
+/* Define background para o app em tema escuro */
+.dark-mode .app-container {
+  background-color: var(--bg-primary);
+}
+
+/* Melhorando visibilidade de links */
+.dark-mode a {
+  color: var(--brand-primary);
+}
+
+.dark-mode a:hover {
+  color: var(--brand-secondary);
+}
+
+/* Corrigindo cores dos botões de navegação em carrosséis e outros componentes */
+.dark-mode .carousel-control-prev-icon,
+.dark-mode .carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* Ajuste para caixas modal em tema escuro */
+.dark-mode .modal-content {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* Ajustes para accordion */
+.dark-mode .accordion-button {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.dark-mode .accordion-button:not(.collapsed) {
+  background-color: rgba(13, 202, 240, 0.1);
+  color: var(--brand-primary);
 }
