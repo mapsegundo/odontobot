@@ -21,7 +21,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: #2c7be5;
+  color: var(--brand-primary);
   transition: all 0.3s ease;
 }
 

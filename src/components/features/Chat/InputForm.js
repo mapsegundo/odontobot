@@ -12,7 +12,7 @@ const InputForm = ({ entrada, setEntrada, getDuvida, isProcessing }) => {
       ></textarea>
       <button
         type="submit"
-        className="btn vw-50 btn-lg text-center m-3 saidaButton"
+        className="btn btn-primary btn-lg text-center m-3 download-button"
         disabled={isProcessing}
       >
         {isProcessing ? "Processando..." : "Enviar"}

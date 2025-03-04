@@ -1,27 +1,27 @@
 .download-button {
-  background-color: var(--brand-primary) !important;
-  border-color: var(--brand-primary) !important;
-  color: white !important;
+  background-color: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: white;
   font-weight: 500;
   font-size: 1rem;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(44, 123, 229, 0.3) !important;
+  box-shadow: var(--shadow-sm);
   min-width: 120px;
   border: none;
   cursor: pointer;
 }
 
 .download-button:hover {
-  background-color: var(--brand-secondary) !important;
-  border-color: var(--brand-secondary) !important;
+  background-color: var(--brand-secondary);
+  border-color: var(--brand-secondary);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(44, 123, 229, 0.4) !important;
+  box-shadow: var(--shadow-md);
 }
 
 .dark-mode .download-button {
-  background-color: var(--brand-primary) !important;
-  border-color: var(--brand-primary) !important;
-  color: white !important;
+  background-color: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: white;
 }

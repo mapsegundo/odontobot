@@ -10,11 +10,17 @@
   --bg-secondary: #f8f9fa;
   --text-primary: #212529;
   --text-secondary: #6c757d;
-  --brand-primary: #2c7be5;
-  --brand-secondary: #1a68d1;
+  --brand-primary: #2c7be5; /* Azul principal */
+  --brand-secondary: #1a68d1; /* Azul secundário */
   --accent: #0062cc;
   --border-color: #dee2e6;
-  --box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+
+  /* Sombras padronizadas */
+  --shadow-sm: 0 2px 5px rgba(44, 123, 229, 0.1);
+  --shadow-md: 0 2px 8px rgba(44, 123, 229, 0.2);
+  --shadow-lg: 0 4px 12px rgba(44, 123, 229, 0.3);
+  --shadow-focus: 0 0 0 3px rgba(44, 123, 229, 0.25);
+
   --input-bg: #ffffff;
   --input-text: #212529;
   --input-border: #ced4da;
@@ -32,7 +38,13 @@
   --brand-secondary: #1a68d1;
   --accent: #2c7be5;
   --border-color: #495057;
-  --box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+
+  /* Sombras padronizadas para tema escuro */
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-focus: 0 0 0 3px rgba(44, 123, 229, 0.4);
+
   --input-bg: #2d2d2d;
   --input-text: #f8f9fa;
   --input-border: #495057;
