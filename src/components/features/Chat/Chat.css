@@ -134,10 +134,11 @@
 .chat-input-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 1rem;
-  background-color: var(--bg-primary);
-  border-top: 1px solid var(--border-color);
-  gap: 0.75rem;
+  background-color: transparent;
+  border-top: none;
+  gap: 1.5rem;
   max-width: 800px;
   margin: 0 auto;
   width: 100%;
@@ -147,23 +148,24 @@
   width: 100%;
   min-height: 150px;
   padding: 0.75rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid #2c7be5;
   border-radius: 8px;
   resize: none;
   font-family: inherit;
   background-color: var(--input-bg) !important;
   color: var(--input-text) !important;
   font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(44, 123, 229, 0.1);
 }
 
 .chat-input:focus {
   outline: none;
   border-color: var(--brand-primary);
-  box-shadow: 0 0 0 2px rgba(13, 202, 240, 0.25);
+  box-shadow: 0 0 0 2px rgba(44, 123, 229, 0.25);
 }
 
 .send-button {
-  align-self: flex-end;
+  align-self: center;
   padding: 0.75rem 1.5rem;
   background-color: var(--brand-primary);
   color: white;
@@ -223,20 +225,20 @@
 
 @media (min-width: 768px) {
   .chat-input-form {
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
   }
 
   .chat-input {
     flex: 1;
-    min-height: 120px;
+    min-height: 150px;
     width: 100%;
   }
 
   .send-button {
-    margin-left: 0.75rem;
-    align-self: flex-start;
+    margin-left: 0;
+    align-self: center;
     min-width: 120px;
   }
 }
