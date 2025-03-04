@@ -1,0 +1,70 @@
+.help-container {
+  padding: 2rem 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.help-section {
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: var(--bg-secondary);
+  box-shadow: var(--box-shadow);
+}
+
+.help-section h2 {
+  color: var(--brand-secondary);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--brand-secondary);
+  padding-bottom: 0.5rem;
+}
+
+.help-example {
+  background-color: rgba(13, 202, 240, 0.1);
+  border-left: 4px solid var(--brand-secondary);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.help-example h4 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.help-example ul {
+  padding-left: 1.5rem;
+}
+
+.help-example li {
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.accordion-button {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--brand-secondary);
+  color: white;
+}
+
+.accordion-body {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .help-container {
+    padding: 1rem;
+  }
+
+  .help-section {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+}
