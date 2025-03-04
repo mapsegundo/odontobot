@@ -1,41 +1,74 @@
-# **OdontoBot**
+# **OdontoBot** 🦷
+
+[![React](https://img.shields.io/badge/React-18.2.0-blue)](https://reactjs.org/)
+[![OpenAI](https://img.shields.io/badge/OpenAI-API-green)](https://openai.com/)
+[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
 ## **Visão Geral**
-OdontoBot é um projeto desenvolvido para estudo e pesquisa, voltado para pessoas interessadas na área da odontologia. O principal objetivo é fornecer informações, suporte técnico e educacional sobre diversos tópicos odontológicos de maneira automatizada e acessível. Este bot utiliza inteligência artificial para responder dúvidas, ajudar estudantes, profissionais e entusiastas, e explorar conceitos relacionados à odontologia.
+
+OdontoBot é um assistente virtual baseado em inteligência artificial desenvolvido para estudantes e profissionais da odontologia. O projeto utiliza a API da OpenAI para fornecer respostas detalhadas sobre diversos tópicos odontológicos, facilitando o estudo, pesquisa e esclarecimento de dúvidas técnicas.
+
+<p align="center">
+  <img src="src/assets/images/odonto.png" alt="OdontoBot Logo" width="200"/>
+</p>
 
 ## **Principais Funcionalidades**
-- **Respostas Automatizadas:** Utilize inteligência artificial (GPT) para responder dúvidas odontológicas.
-- **Interface Intuitiva:** Design responsivo e amigável, com exibição organizada das respostas em formato HTML estilizado.
-- **Personalização e Estudo:** Perfeito para quem deseja aprender ou aprofundar conhecimentos na área odontológica.
-- **Foco Educacional:** Explicações claras e objetivas sobre tópicos como diagnósticos, tratamentos, prevenção e reabilitação oral.
-- **Flexibilidade:** Integrado a tecnologias modernas para personalização e expansibilidade.
+
+- **Consulta Especializada:** Utilize inteligência artificial para obter respostas sobre tópicos odontológicos
+- **Exportação para PDF:** Salve as respostas em formato PDF para estudo posterior
+- **Interface Intuitiva:** Design responsivo e amigável com exibição organizada das respostas
+- **Conteúdo Educacional:** Explicações detalhadas sobre diagnósticos, tratamentos, prevenção e reabilitação oral
 
 ## **Público-Alvo**
-- Estudantes de odontologia.
-- Profissionais da área odontológica.
-- Entusiastas interessados em aprender mais sobre saúde bucal.
-- Pesquisadores explorando a aplicação de inteligência artificial na odontologia.
 
-## Estrutura do Projeto
+- Estudantes de graduação e pós-graduação em odontologia
+- Professores e pesquisadores da área odontológica
+- Clínicos e especialistas buscando informações atualizadas
+- Entusiastas interessados em saúde bucal
 
-- `src/`
-  - `components/`
-    - `Home.js`: Componente principal que contém a lógica para interagir com a API da OpenAI.
-    - `Navbar.js`: Componente de navegação.
-    - `Footer.js`: Componente de rodapé.
-  - `img/`
-    - `odonto.png`: Imagem do logotipo do OdontoBot.
-  - `App.js`: Componente raiz da aplicação.
-  - `index.js`: Ponto de entrada da aplicação.
-  - `App.css`: Estilos globais da aplicação.
-  - `Home.css`: Estilos específicos para o componente Home.
+## **Demonstração**
 
-## Configuração
+[Link para demonstração ao vivo](https://odontobot.vercel.app) (Em breve)
+
+## **Tecnologias Utilizadas**
+
+- React 18
+- Bootstrap 5
+- OpenAI API (GPT-3.5 Turbo)
+- jsPDF (para exportação de documentos)
+- React Toastify (notificações)
+
+## **Estrutura do Projeto**
+
+```
+odontobot/
+├── public/               # Arquivos públicos estáticos
+├── src/                  # Código fonte da aplicação
+│   ├── assets/           # Recursos estáticos (imagens, estilos)
+│   │   ├── images/       # Imagens e ícones
+│   │   └── styles/       # Arquivos CSS/SCSS
+│   ├── components/       # Componentes React reutilizáveis
+│   │   ├── common/       # Componentes compartilhados (UI)
+│   │   ├── features/     # Componentes específicos de funcionalidades
+│   │   └── layout/       # Componentes de estrutura (Navbar, Footer)
+│   ├── hooks/            # Custom hooks React
+│   ├── services/         # Serviços de API e integrações
+│   ├── utils/            # Funções utilitárias
+│   ├── context/          # Contextos React (estado global)
+│   ├── App.js            # Componente principal
+│   └── index.js          # Ponto de entrada
+├── .env                  # Variáveis de ambiente (não incluir no git)
+├── .gitignore            # Arquivos ignorados pelo git
+├── package.json          # Dependências e scripts
+└── README.md             # Documentação
+```
+
+## **Instalação e Configuração**
 
 ### Pré-requisitos
 
-- Node.js
-- npm (gerenciador de pacotes do Node.js)
+- Node.js (v14 ou superior)
+- npm ou yarn
 
 ### Instalação
 
@@ -44,81 +77,89 @@ OdontoBot é um projeto desenvolvido para estudo e pesquisa, voltado para pessoa
    ```sh
    git clone https://github.com/mapsegundo/odontobot.git
    cd odontobot
-
    ```
 
 2. Instale as dependências:
 
    ```sh
    npm install
+   # ou
+   yarn install
    ```
 
-3. Crie um arquivo `.env` na raiz do projeto e adicione sua chave de API da OpenAI:
+3. Configure as variáveis de ambiente:
 
-   ```properties
-   REACT_APP_OPENAI_API_KEY=your_openai_api_key
-   ```
+   - Crie um arquivo `.env` na raiz do projeto baseado no `.env.example`
+   - Adicione sua chave de API da OpenAI:
+     ```
+     REACT_APP_OPENAI_API_KEY=sua_chave_api_aqui
+     ```
 
-### Scripts Disponíveis
-
-No diretório do projeto, você pode executar:
-
-- `npm start`: Inicia o servidor de desenvolvimento.
-- `npm run build`: Cria uma build otimizada para produção.
-- `npm run eject`: Ejecta a configuração do Create React App.
-
-## Uso
-
-1. Inicie o servidor de desenvolvimento:
+4. Inicie o servidor de desenvolvimento:
 
    ```sh
    npm start
+   # ou
+   yarn start
    ```
 
-2. Abra [http://localhost:3000](http://localhost:3000) para visualizar no navegador.
+5. Acesse [http://localhost:3000](http://localhost:3000) no navegador
 
-3. Digite sua dúvida odontológica no campo de entrada e clique em "Enviar". A resposta gerada será exibida abaixo do campo de entrada.
+## **Uso**
 
-## Estrutura do Código
+1. Digite sua dúvida odontológica no campo de texto
+2. Clique em "Enviar" para receber a resposta
+3. A resposta será exibida em formato HTML estruturado
+4. Utilize o botão de download para salvar a resposta em PDF
 
-### Home.js
+## **Segurança**
 
-O componente `Home` é responsável por:
+**Importante:** Nunca compartilhe sua chave da API OpenAI no código ou inclua o arquivo `.env` nos commits. Este arquivo está incluído no `.gitignore` para garantir que não seja enviado ao repositório.
 
-- Renderizar a interface de usuário.
-- Capturar a entrada do usuário.
-- Fazer chamadas à API da OpenAI.
-- Exibir a resposta gerada.
+## **Deployment**
 
-### Navbar.js
+Para fazer o deploy da aplicação para produção:
 
-O componente `Navbar` é responsável por renderizar a barra de navegação no topo da página.
+```sh
+npm run build
+# ou
+yarn build
+```
 
-### Footer.js
+Isso criará uma versão otimizada da aplicação na pasta `build/`, que pode ser hospedada em qualquer servidor web estático.
 
-O componente `Footer` é responsável por renderizar o rodapé na parte inferior da página.
+## **Roadmap**
 
-## Estilos
+- [ ] Implementar modo escuro
+- [ ] Adicionar histórico de consultas
+- [ ] Melhorar responsividade mobile
+- [ ] Implementar sistema de feedback para respostas
+- [ ] Adicionar categorização por tópicos odontológicos
+- [ ] Criar biblioteca de imagens de referência
+- [ ] Melhorar acessibilidade
 
-### App.css
+## **Contribuição**
 
-Contém estilos globais para a aplicação.
+Contribuições são bem-vindas! Para contribuir:
 
-### Home.css
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature: `git checkout -b feature/nova-funcionalidade`
+3. Faça commit das mudanças: `git commit -m 'Adiciona nova funcionalidade'`
+4. Envie para o repositório remoto: `git push origin feature/nova-funcionalidade`
+5. Abra um Pull Request
 
-Contém estilos específicos para o componente `Home`, incluindo a formatação das respostas geradas.
+## **Licença**
 
-## Dependências
+Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-- `bootstrap`: Framework CSS para estilização.
-- `html-react-parser`: Biblioteca para analisar e renderizar HTML.
-- `openai`: Biblioteca para interagir com a API da OpenAI.
-- `react`: Biblioteca principal do React.
-- `react-dom`: Biblioteca para manipulação do DOM com React.
-- `react-scripts`: Scripts e configuração para Create React App.
-- `react-toastify`: Biblioteca para exibir notificações.
-- `web-vitals`: Biblioteca para medir métricas de desempenho da web.
+## **Contato**
 
-## Licença
+- **Desenvolvedor:** Marshall Paiva
+- **Email:** marshallpaiva@hotmail.com
+- **GitHub:** [mapsegundo](https://github.com/mapsegundo)
 
-Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+---
+
+<p align="center">
+  Feito com ❤️ para a comunidade odontológica
+</p>

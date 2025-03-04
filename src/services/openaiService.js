@@ -1,12 +1,12 @@
-const { Configuration, OpenAIApi } = require("openai");
+import OpenAI from "openai";
 
-const configuration = new Configuration({
+const openai = new OpenAI({
   apiKey: process.env.REACT_APP_OPENAI_API_KEY,
+  dangerouslyAllowBrowser: true, // Apenas para desenvolvimento
 });
-const openai = new OpenAIApi(configuration);
 
 export const getOpenAIResponse = async (entrada) => {
-  const response = await openai.createChatCompletion({
+  const response = await openai.chat.completions.create({
     model: "gpt-3.5-turbo",
     messages: [
       {
@@ -37,5 +37,5 @@ export const getOpenAIResponse = async (entrada) => {
     presence_penalty: 0.0,
   });
 
-  return response.data.choices[0].message.content;
+  return response.choices[0].message.content;
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import odonto from "../assets/images/odonto.png";
+import odonto from "../../../assets/images/odonto.png";
 
 const Navbar = () => {
   return (

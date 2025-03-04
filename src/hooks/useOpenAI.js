@@ -1,31 +1,56 @@
-import { useState } from "react";
+import { useCallback } from "react";
 import { getOpenAIResponse } from "../services/openaiService";
 import { toast } from "react-toastify";
+import { useChatContext } from "../context/ChatContext";
 
 const useOpenAI = () => {
-  const [isProcessing, setIsProcessing] = useState(false);
-  const [saida, setSaida] = useState("");
+  const {
+    isProcessing,
+    setIsProcessing,
+    currentResponse,
+    setCurrentResponse,
+    addMessage,
+  } = useChatContext();
 
-  const fetchResponse = async (entrada) => {
-    if (isProcessing) return;
+  const fetchResponse = useCallback(
+    async (entrada) => {
+      if (isProcessing) return;
 
-    setIsProcessing(true);
-    setSaida("");
+      setIsProcessing(true);
+      setCurrentResponse("");
 
-    try {
-      const response = await getOpenAIResponse(entrada);
-      setSaida(response);
-      toast.success("Resposta gerada com sucesso!");
-    } catch (error) {
-      toast.error(
-        "Erro ao chamar a API da OpenAI. Tente novamente mais tarde."
-      );
-    } finally {
-      setIsProcessing(false);
-    }
-  };
+      // Adicionar a pergunta do usuário ao histórico
+      addMessage({
+        type: "question",
+        content: entrada,
+        timestamp: new Date().toISOString(),
+      });
 
-  return { isProcessing, saida, fetchResponse };
+      try {
+        const response = await getOpenAIResponse(entrada);
+        setCurrentResponse(response);
+
+        // Adicionar a resposta ao histórico
+        addMessage({
+          type: "answer",
+          content: response,
+          timestamp: new Date().toISOString(),
+        });
+
+        toast.success("Resposta gerada com sucesso!");
+      } catch (error) {
+        console.error("Erro na API:", error);
+        toast.error(
+          "Erro ao chamar a API da OpenAI. Tente novamente mais tarde."
+        );
+      } finally {
+        setIsProcessing(false);
+      }
+    },
+    [isProcessing, setIsProcessing, setCurrentResponse, addMessage]
+  );
+
+  return { isProcessing, saida: currentResponse, fetchResponse };
 };
 
 export default useOpenAI;

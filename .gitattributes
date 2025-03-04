@@ -1,0 +1,28 @@
+# Defina a normalização de linha para todos os arquivos de texto
+* text=auto
+
+# Tratamento específico para arquivos JavaScript e JSX
+*.js    text eol=lf
+*.jsx   text eol=lf
+*.json  text eol=lf
+
+# Arquivos CSS
+*.css   text eol=lf
+*.scss  text eol=lf
+
+# Arquivos HTML
+*.html  text eol=lf
+
+# Arquivos de documentação
+*.md    text eol=lf
+
+# Binários
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.svg   text
+
+# Arquivos de configuração
+.env.example text eol=lf 

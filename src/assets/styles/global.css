@@ -1,0 +1,85 @@
+/* Estilos globais */
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --success-color: #198754;
+  --info-color: #0dcaf0;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--light-color);
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.odonto {
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  background-color: #212529;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.odonto h1 {
+  color: #0dcaf0;
+  margin-bottom: 20px;
+}
+
+.odonto h2 {
+  color: #0dcaf0;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.odonto p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.odonto ul {
+  margin-bottom: 20px;
+}
+
+.odonto li {
+  margin-bottom: 8px;
+  color: white;
+}
+
+.odonto a {
+  color: #0dcaf0;
+  text-decoration: none;
+}
+
+.odonto a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .odonto {
+    padding: 15px;
+  }
+}
