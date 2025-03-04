@@ -25,10 +25,10 @@
 
 .main-layout main > * {
   width: 100%;
-  max-width: var(--content-width-lg);
-  padding-left: var(--spacing-md);
-  padding-right: var(--spacing-md);
-  margin-bottom: var(--spacing-md);
+  max-width: 95%;
+  padding-left: var(--spacing-sm);
+  padding-right: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
 }
 
 .main-layout footer {
@@ -40,14 +40,15 @@
   .main-layout main {
     padding-top: 70px;
     padding-bottom: var(--spacing-md);
-    padding-left: var(--spacing-sm);
-    padding-right: var(--spacing-sm);
+    padding-left: var(--spacing-xs);
+    padding-right: var(--spacing-xs);
   }
 
   .main-layout main > * {
-    padding-left: var(--spacing-sm);
-    padding-right: var(--spacing-sm);
-    margin-bottom: var(--spacing-sm);
+    max-width: 100%;
+    padding-left: var(--spacing-xs);
+    padding-right: var(--spacing-xs);
+    margin-bottom: var(--spacing-xs);
   }
 }
 

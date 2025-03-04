@@ -2,19 +2,14 @@ import React from "react";
 
 const InputForm = ({ entrada, setEntrada, getDuvida, isProcessing }) => {
   return (
-    <form className="text-center" onSubmit={getDuvida}>
+    <form className="chat-input-form" onSubmit={getDuvida}>
       <textarea
-        className="shadow-none form-control w-75 mx-auto rounded textareaInput"
+        className="chat-input"
         placeholder="Digite aqui"
-        style={{ height: "100px" }}
         value={entrada}
         onChange={(e) => setEntrada(e.target.value)}
       ></textarea>
-      <button
-        type="submit"
-        className="btn btn-primary btn-lg text-center m-3 download-button"
-        disabled={isProcessing}
-      >
+      <button type="submit" className="send-button" disabled={isProcessing}>
         {isProcessing ? "Processando..." : "Enviar"}
       </button>
     </form>
