@@ -1,8 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../../../context/ThemeContext";
-import lightLogo from "../../../assets/images/logo-light.png";
-import darkLogo from "../../../assets/images/logo-dark.png";
+import odonto from "../../../assets/images/odonto.png";
 import "./styles.css";
 
 const Navbar = () => {
@@ -23,7 +22,7 @@ const Navbar = () => {
       <div className="container">
         <Link className="navbar-brand d-flex align-items-center" to="/">
           <img
-            src={darkMode ? lightLogo : darkLogo}
+            src={odonto}
             alt="OdontoBot Logo"
             width="40"
             height="40"
