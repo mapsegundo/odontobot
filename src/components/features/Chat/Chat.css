@@ -52,6 +52,31 @@
   border-left: 4px solid var(--brand-primary);
 }
 
+.odonto h1 {
+  color: var(--brand-primary);
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--brand-primary);
+}
+
+.odonto h2 {
+  color: var(--brand-primary);
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--brand-secondary);
+}
+
+.odonto h3 {
+  color: var(--brand-secondary);
+  font-size: 1.2rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
 .odonto img,
 .odonto pre {
   max-width: 100%;
@@ -134,11 +159,13 @@
   font-weight: 500;
   font-size: 1rem;
   min-width: 120px;
+  box-shadow: 0 2px 5px rgba(13, 202, 240, 0.3);
 }
 
 .send-button:hover:not(:disabled) {
   background-color: var(--brand-secondary);
   transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(13, 202, 240, 0.4);
 }
 
 .send-button:disabled {
@@ -157,6 +184,12 @@
 .dark-mode .odonto {
   background-color: #1e1e1e;
   border-left: 4px solid var(--brand-primary);
+}
+
+.dark-mode .odonto h1,
+.dark-mode .odonto h2,
+.dark-mode .odonto h3 {
+  color: var(--brand-primary);
 }
 
 .dark-mode .odonto code {
