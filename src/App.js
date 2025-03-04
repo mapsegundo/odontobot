@@ -5,6 +5,7 @@ import Home from "./components/features/Home/index.js";
 import Help from "./components/features/Help";
 import { ChatProvider } from "./context/ChatContext";
 import { ThemeProvider } from "./context/ThemeContext";
+import MainLayout from "./components/layout/MainLayout";
 import "./assets/styles/global.css";
 
 function App() {
@@ -12,13 +13,13 @@ function App() {
     <ThemeProvider>
       <ChatProvider>
         <Router>
-          <div className="app-container">
+          <MainLayout>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/ajuda" element={<Help />} />
               {/* Adicionar outras rotas conforme necessário */}
             </Routes>
-          </div>
+          </MainLayout>
         </Router>
       </ChatProvider>
     </ThemeProvider>
