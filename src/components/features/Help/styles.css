@@ -1,17 +1,18 @@
 .help-container {
-  max-width: 900px;
+  max-width: var(--content-width-lg);
   margin: 0 auto;
-  padding: 2rem;
+  padding: var(--spacing-lg);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-lg);
   transition: all 0.3s ease;
 }
 
 .help-section {
-  margin-bottom: 2.5rem;
-  padding-bottom: 1.5rem;
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-md);
   border-bottom: 1px solid rgba(128, 128, 128, 0.2);
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .help-section:last-child {
@@ -20,22 +21,24 @@
 }
 
 .help-section h2 {
-  color: #2c7be5;
-  margin-bottom: 1rem;
+  color: var(--brand-primary);
+  margin-bottom: var(--spacing-md);
   font-size: 1.6rem;
   position: relative;
-  padding-bottom: 0.5rem;
+  padding-bottom: var(--spacing-xs);
   transition: color 0.3s ease;
+  display: inline-block;
 }
 
 .help-section h2:after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 50px;
   height: 3px;
-  background-color: #2c7be5;
+  background-color: var(--brand-primary);
   transition: width 0.3s ease;
 }
 
@@ -45,11 +48,13 @@
 
 .help-example {
   background-color: rgba(44, 123, 229, 0.05);
-  padding: 1.5rem;
+  padding: var(--spacing-md);
   border-radius: 8px;
-  margin-top: 1rem;
-  border-left: 4px solid #2c7be5;
+  margin: var(--spacing-md) auto;
+  border-left: 4px solid var(--brand-primary);
   transition: all 0.3s ease;
+  max-width: var(--content-width-md);
+  text-align: left;
 }
 
 .help-example:hover {
@@ -120,21 +125,23 @@
 /* Responsividade */
 @media (max-width: 768px) {
   .help-container {
-    padding: 1.5rem;
+    padding: var(--spacing-md);
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
   }
 
   .help-section {
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
   }
 
   .help-section h2 {
     font-size: 1.4rem;
+    margin-bottom: var(--spacing-sm);
   }
 
   .help-example {
-    padding: 1rem;
+    padding: var(--spacing-sm);
+    margin: var(--spacing-sm) auto;
   }
 }

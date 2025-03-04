@@ -1,6 +1,6 @@
 .home-container {
-  padding: 1rem;
-  max-width: 900px;
+  padding: var(--spacing-md);
+  max-width: var(--content-width-lg);
   margin: 0 auto;
   width: 100%;
   display: flex;
@@ -9,18 +9,19 @@
 }
 
 .intro-section {
-  margin-bottom: 2rem;
-  padding: 2rem 1rem;
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-lg) var(--spacing-md);
   border-radius: 12px;
   width: 100%;
-  max-width: 800px;
+  max-width: var(--content-width-md);
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .intro-section h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--spacing-md);
   color: var(--brand-primary);
   transition: all 0.3s ease;
 }
@@ -29,18 +30,26 @@
   font-size: 1.2rem;
   line-height: 1.6;
   transition: all 0.3s ease;
+  margin-bottom: var(--spacing-md);
 }
 
 @media (max-width: 768px) {
+  .home-container {
+    padding: var(--spacing-sm);
+  }
+
   .intro-section {
-    padding: 1.5rem 1rem;
+    padding: var(--spacing-md) var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
   }
 
   .intro-section h1 {
     font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
   }
 
   .intro-section p {
     font-size: 1rem;
+    margin-bottom: var(--spacing-sm);
   }
 }
