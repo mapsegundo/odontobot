@@ -3,9 +3,9 @@ import "./styles.css";
 
 const Help = () => {
   return (
-    <div className="help-page container-centered">
+    <div className="help-page">
       <div className="help-container">
-        <h1 className="text-center mb-4">Como usar o OdontoBot</h1>
+        <h1>Como usar o OdontoBot</h1>
 
         <div className="help-section">
           <h2>Fazendo perguntas</h2>

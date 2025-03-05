@@ -1,7 +1,6 @@
 .help-page {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
   padding: var(--spacing-md) 0;
 }
@@ -17,12 +16,18 @@
   width: 100%;
 }
 
+.help-container h1 {
+  color: var(--brand-primary);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
 .help-section {
   margin-bottom: var(--spacing-xl);
   padding-bottom: var(--spacing-md);
   border-bottom: 1px solid rgba(128, 128, 128, 0.2);
   transition: all 0.3s ease;
-  text-align: center;
+  text-align: left;
 }
 
 .help-section:last-child {
@@ -44,8 +49,7 @@
   content: "";
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   width: 50px;
   height: 3px;
   background-color: var(--brand-primary);
@@ -56,14 +60,20 @@
   width: 80px;
 }
 
+.help-section p {
+  line-height: 1.7;
+  margin-bottom: var(--spacing-md);
+  max-width: 80ch;
+}
+
 .help-example {
   background-color: rgba(44, 123, 229, 0.05);
   padding: var(--spacing-md);
   border-radius: 8px;
-  margin: var(--spacing-md) auto;
+  margin: var(--spacing-md) 0;
   border-left: 4px solid var(--brand-primary);
   transition: all 0.3s ease;
-  max-width: var(--content-width-md);
+  max-width: 100%;
   text-align: left;
 }
 
@@ -94,10 +104,18 @@
   transform: translateX(5px);
 }
 
+/* Accoridion styles */
+
+.accordion {
+  margin-top: var(--spacing-md);
+  text-align: left;
+}
+
 .accordion-button {
   padding: 1rem 1.25rem;
   font-weight: 500;
   transition: all 0.3s ease;
+  text-align: left;
 }
 
 .accordion-button:focus {
@@ -118,6 +136,7 @@
   padding: 1.5rem;
   line-height: 1.6;
   background-color: rgba(250, 250, 250, 0.5);
+  text-align: left;
 }
 
 .accordion-item {
@@ -153,6 +172,6 @@
 
   .help-example {
     padding: var(--spacing-sm);
-    margin: var(--spacing-sm) auto;
+    margin: var(--spacing-sm) 0;
   }
 }
