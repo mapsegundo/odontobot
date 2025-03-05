@@ -1,31 +1,15 @@
-.help-page {
+.help-container {
   display: flex;
   justify-content: center;
-  width: 100%;
   padding: var(--spacing-md);
   min-height: 80vh;
-}
-
-.help-container {
-  max-width: var(--content-width-md);
   width: 100%;
-  animation: fadeIn 0.5s ease-in-out;
 }
 
 .help-content {
+  max-width: var(--content-width-md);
   width: 100%;
-}
-
-.help-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: var(--spacing-md);
-}
-
-.help-logo {
-  width: 60px;
-  height: 60px;
-  margin-right: var(--spacing-sm);
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .help-intro h1 {
@@ -42,8 +26,6 @@
 
 .help-section {
   margin-bottom: var(--spacing-xl);
-  transition: all 0.3s ease;
-  text-align: left;
 }
 
 .help-section:last-child {
@@ -56,13 +38,12 @@
   margin-bottom: var(--spacing-md);
   padding-bottom: var(--spacing-xs);
   border-bottom: 2px solid var(--brand-primary);
-  display: block;
 }
 
 .help-section p {
-  line-height: 1.7;
+  font-size: 1.1rem;
+  line-height: 1.6;
   margin-bottom: var(--spacing-md);
-  max-width: 80ch;
 }
 
 .help-example {
@@ -70,10 +51,8 @@
   padding: var(--spacing-md);
   border-radius: 10px;
   box-shadow: var(--shadow-sm);
+  margin-top: var(--spacing-md);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: var(--spacing-md) 0;
-  max-width: 100%;
-  text-align: left;
 }
 
 .help-example:hover {
@@ -88,66 +67,66 @@
 }
 
 .help-example ul {
-  padding-left: 1.5rem;
-  margin-bottom: 0;
+  padding-left: var(--spacing-md);
+  margin-top: var(--spacing-sm);
 }
 
 .help-example li {
-  margin-bottom: 0.5rem;
-  line-height: 1.6;
-  position: relative;
+  margin-bottom: 8px;
+  padding: 4px 0;
   transition: transform 0.2s ease;
+  cursor: pointer;
+  list-style-type: circle;
 }
 
 .help-example li:hover {
   transform: translateX(5px);
+  color: var(--brand-primary);
 }
-
-/* Accoridion styles */
 
 .accordion {
   margin-top: var(--spacing-md);
-  text-align: left;
+  border-radius: 8px;
 }
 
 .accordion-button {
-  padding: 1rem 1.25rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  text-align: left;
+  font-weight: 600;
+  padding: 15px;
+  background-color: var(--bg-secondary);
 }
 
 .accordion-button:focus {
   box-shadow: none;
-  border-color: rgba(44, 123, 229, 0.25);
+  background-color: var(--bg-secondary);
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: rgba(44, 123, 229, 0.1);
-  color: #2c7be5;
+  color: var(--brand-primary);
+  background-color: var(--bg-secondary);
 }
 
 .accordion-button:not(.collapsed)::after {
-  transform: rotate(180deg);
+  filter: invert(40%) sepia(57%) saturate(2532%) hue-rotate(205deg)
+    brightness(101%) contrast(101%);
 }
 
 .accordion-body {
-  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  padding: 15px 20px;
+  font-size: 1rem;
   line-height: 1.6;
-  background-color: rgba(250, 250, 250, 0.5);
-  text-align: left;
 }
 
 .accordion-item {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-secondary);
+  margin-bottom: 10px;
   border-radius: 8px;
   overflow: hidden;
-  margin-bottom: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  transition: all 0.3s ease;
 }
 
 .accordion-item:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
 }
 
 @keyframes fadeIn {
@@ -164,17 +143,7 @@
 /* Responsividade */
 @media (max-width: 768px) {
   .help-container {
-    margin: 0 auto;
-  }
-
-  .help-header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .help-logo {
-    margin-right: 0;
-    margin-bottom: var(--spacing-sm);
+    padding: var(--spacing-sm);
   }
 
   .help-section {
@@ -182,12 +151,10 @@
   }
 
   .help-section h2 {
-    font-size: 1.4rem;
-    margin-bottom: var(--spacing-sm);
+    font-size: 1.5rem;
   }
 
   .help-example {
     padding: var(--spacing-sm);
-    margin: var(--spacing-sm) 0;
   }
 }

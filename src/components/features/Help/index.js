@@ -1,16 +1,12 @@
 import React from "react";
 import "./styles.css";
-import logoImg from "../../../assets/images/odonto.png";
 
 const Help = () => {
   return (
     <div className="help-container">
       <div className="help-content">
         <section className="help-intro">
-          <div className="help-header">
-            <img src={logoImg} alt="OdontoBot Logo" className="help-logo" />
-            <h1>Como usar o OdontoBot</h1>
-          </div>
+          <h1>Como usar o OdontoBot</h1>
           <p className="help-description">
             O OdontoBot foi projetado para auxiliá-lo com informações e
             orientações sobre odontologia de forma simples e educativa. Aqui
