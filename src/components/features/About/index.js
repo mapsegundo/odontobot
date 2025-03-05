@@ -1,6 +1,5 @@
 import React from "react";
 import "./styles.css";
-import logoImg from "../../../assets/images/odonto.png";
 
 const About = () => {
   return (
@@ -8,7 +7,6 @@ const About = () => {
       <div className="about-content">
         <section className="about-intro">
           <div className="about-header">
-            <img src={logoImg} alt="OdontoBot Logo" className="about-logo" />
             <h1>Sobre o OdontoBot</h1>
           </div>
           <p className="about-description">

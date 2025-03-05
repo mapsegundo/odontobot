@@ -43,7 +43,7 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <div className="contact-content">
-        <h1>Entre em Contato</h1>
+        <h1>Entre em Contato (Em Construção)</h1>
         <p className="contact-intro">
           Tem alguma dúvida ou sugestão sobre o OdontoBot? Preencha o formulário
           abaixo e nossa equipe entrará em contato o mais breve possível.
@@ -55,7 +55,7 @@ const Contact = () => {
               <i className="bi bi-envelope"></i>
             </div>
             <h3>E-mail</h3>
-            <p>contato@odontobot.com.br</p>
+            <p>marshallpaiva@hotmail.com</p>
           </div>
 
           <div className="contact-info-card">
@@ -71,7 +71,7 @@ const Contact = () => {
               <i className="bi bi-geo-alt"></i>
             </div>
             <h3>Localização</h3>
-            <p>São Paulo, SP - Brasil</p>
+            <p>Fortaleza, CE - Brasil</p>
           </div>
         </div>
 
