@@ -56,7 +56,7 @@
   padding: var(--spacing-md);
   margin: var(--spacing-md) 0;
   border-radius: 12px;
-  background-color: var(--bg-secondary);
+  background-color: var(--navbar-bg);
   box-shadow: var(--shadow-md);
   max-width: 90%;
   width: 90%;
@@ -81,9 +81,6 @@
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--brand-primary);
   font-weight: 600;
-  background-color: var(--navbar-bg);
-  padding: 0.5rem;
-  border-radius: 4px;
 }
 
 .odonto h2 {
@@ -94,9 +91,6 @@
   padding-bottom: 0.25rem;
   border-bottom: 1px solid var(--brand-secondary);
   font-weight: 500;
-  background-color: var(--navbar-bg);
-  padding: 0.5rem;
-  border-radius: 4px;
 }
 
 .odonto h3 {
@@ -105,9 +99,6 @@
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
   font-weight: 500;
-  background-color: var(--navbar-bg);
-  padding: 0.5rem;
-  border-radius: 4px;
 }
 
 .odonto h1:last-of-type,
@@ -224,8 +215,8 @@
 
 /* Tema escuro específico para o chat */
 .dark-mode .odonto {
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--bg-secondary);
+  background-color: var(--navbar-bg);
+  border: 1px solid var(--navbar-bg);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
@@ -233,9 +224,6 @@
 .dark-mode .odonto h2,
 .dark-mode .odonto h3 {
   color: #3a9bff;
-  background-color: var(--navbar-bg);
-  padding: 0.5rem;
-  border-radius: 4px;
 }
 
 .dark-mode .odonto h1 {
@@ -260,22 +248,17 @@
   border-color: #444;
 }
 
+/* Removendo background individual dos elementos no tema escuro */
 .dark-mode .odonto p,
 .dark-mode .odonto ul,
 .dark-mode .odonto ol {
-  background-color: var(--navbar-bg);
-  padding: 0.5rem;
-  border-radius: 4px;
   margin: 0.75rem 0;
 }
 
-/* Aplicando background no tema claro */
+/* Removendo aplicação de background individual no tema claro */
 .odonto p,
 .odonto ul,
 .odonto ol {
-  background-color: var(--navbar-bg);
-  padding: 0.5rem;
-  border-radius: 4px;
   margin: 0.75rem 0;
 }
 
