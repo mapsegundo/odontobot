@@ -39,25 +39,10 @@
   color: var(--brand-primary);
   margin-bottom: var(--spacing-md);
   font-size: 1.6rem;
-  position: relative;
   padding-bottom: var(--spacing-xs);
   transition: color 0.3s ease;
-  display: inline-block;
-}
-
-.help-section h2:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 3px;
-  background-color: var(--brand-primary);
-  transition: width 0.3s ease;
-}
-
-.help-section:hover h2:after {
-  width: 80px;
+  border-bottom: 2px solid var(--brand-primary);
+  display: block;
 }
 
 .help-section p {
