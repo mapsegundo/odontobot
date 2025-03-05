@@ -216,8 +216,9 @@
 
 /* Tema escuro específico para o chat */
 .dark-mode .odonto {
-  background-color: #1e1e1e;
-  box-shadow: var(--shadow-md);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--bg-secondary);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .dark-mode .odonto h1,
