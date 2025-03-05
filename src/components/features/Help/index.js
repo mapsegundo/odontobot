@@ -1,13 +1,24 @@
 import React from "react";
 import "./styles.css";
+import logoImg from "../../../assets/images/odonto.png";
 
 const Help = () => {
   return (
-    <div className="help-page">
-      <div className="help-container">
-        <h1>Como usar o OdontoBot</h1>
+    <div className="help-container">
+      <div className="help-content">
+        <section className="help-intro">
+          <div className="help-header">
+            <img src={logoImg} alt="OdontoBot Logo" className="help-logo" />
+            <h1>Como usar o OdontoBot</h1>
+          </div>
+          <p className="help-description">
+            O OdontoBot foi projetado para auxiliá-lo com informações e
+            orientações sobre odontologia de forma simples e educativa. Aqui
+            você encontrará instruções sobre como utilizar o sistema.
+          </p>
+        </section>
 
-        <div className="help-section">
+        <section className="help-section">
           <h2>Fazendo perguntas</h2>
           <p>
             Digite sua dúvida sobre temas relacionados à odontologia na caixa de
@@ -15,7 +26,7 @@ const Help = () => {
             específico em sua pergunta e inclua detalhes relevantes.
           </p>
           <div className="help-example">
-            <h4>Exemplos de perguntas:</h4>
+            <h3>Exemplos de perguntas:</h3>
             <ul>
               <li>"Quais são os sintomas de pulpite?"</li>
               <li>"Como tratar sensibilidade dentária pós-clareamento?"</li>
@@ -24,27 +35,27 @@ const Help = () => {
               <li>"Técnicas atuais de enxerto ósseo para implantes"</li>
             </ul>
           </div>
-        </div>
+        </section>
 
-        <div className="help-section">
+        <section className="help-section">
           <h2>Exportando respostas</h2>
           <p>
             Após receber uma resposta, você pode baixá-la em formato PDF
             clicando no botão "Baixar PDF" que aparece abaixo da resposta. Isso
             é útil para estudos ou para compartilhar com colegas.
           </p>
-        </div>
+        </section>
 
-        <div className="help-section">
+        <section className="help-section">
           <h2>Alternando entre tema claro e escuro</h2>
           <p>
             Você pode alternar entre os temas claro e escuro clicando no ícone
             de sol/lua localizado na barra de navegação superior. O tema escuro
             é ideal para uso noturno e reduz o cansaço visual.
           </p>
-        </div>
+        </section>
 
-        <div className="help-section">
+        <section className="help-section">
           <h2>Limitações</h2>
           <p>
             O OdontoBot utiliza a API GPT-3.5 da OpenAI e, embora tenha vasto
@@ -52,9 +63,9 @@ const Help = () => {
             tratamento feito por um profissional qualificado. Sempre consulte um
             dentista para questões relacionadas à sua saúde bucal.
           </p>
-        </div>
+        </section>
 
-        <div className="help-section">
+        <section className="help-section">
           <h2>Problemas frequentes</h2>
           <div className="accordion" id="helpAccordion">
             <div className="accordion-item">
@@ -138,7 +149,7 @@ const Help = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );
