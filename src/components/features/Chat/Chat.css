@@ -224,7 +224,15 @@
 .dark-mode .odonto h1,
 .dark-mode .odonto h2,
 .dark-mode .odonto h3 {
-  color: var(--brand-primary);
+  color: #3a9bff;
+}
+
+.dark-mode .odonto h1 {
+  border-bottom: 2px solid #333333;
+}
+
+.dark-mode .odonto h2 {
+  border-bottom: 1px solid #333333;
 }
 
 .dark-mode .odonto code {
