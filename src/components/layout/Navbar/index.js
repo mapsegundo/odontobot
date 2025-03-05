@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../../../context/ThemeContext";
 import odonto from "../../../assets/images/odonto.png";
@@ -7,10 +7,21 @@ import "./styles.css";
 const Navbar = () => {
   const { darkMode, toggleDarkMode } = useTheme();
   const location = useLocation();
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   // Função para verificar se o link está ativo
   const isActive = (path) => {
     return location.pathname === path ? "active" : "";
+  };
+
+  // Função para alternar o estado do menu
+  const toggleNav = () => {
+    setIsNavExpanded(!isNavExpanded);
+  };
+
+  // Função para fechar o menu quando um link é clicado
+  const closeNav = () => {
+    setIsNavExpanded(false);
   };
 
   return (
@@ -20,7 +31,11 @@ const Navbar = () => {
       }`}
     >
       <div className="container">
-        <Link className="navbar-brand d-flex align-items-center" to="/">
+        <Link
+          className="navbar-brand d-flex align-items-center"
+          to="/"
+          onClick={closeNav}
+        >
           <img
             src={odonto}
             alt="OdontoBot Logo"
@@ -34,29 +49,43 @@ const Navbar = () => {
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+          onClick={toggleNav}
           aria-controls="navbarNav"
-          aria-expanded="false"
+          aria-expanded={isNavExpanded}
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div
+          className={`collapse navbar-collapse ${isNavExpanded ? "show" : ""}`}
+          id="navbarNav"
+        >
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className={`nav-link ${isActive("/")}`} to="/">
+              <Link
+                className={`nav-link ${isActive("/")}`}
+                to="/"
+                onClick={closeNav}
+              >
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className={`nav-link ${isActive("/sobre")}`} to="/sobre">
+              <Link
+                className={`nav-link ${isActive("/sobre")}`}
+                to="/sobre"
+                onClick={closeNav}
+              >
                 Sobre
               </Link>
             </li>
             <li className="nav-item">
-              <Link className={`nav-link ${isActive("/ajuda")}`} to="/ajuda">
+              <Link
+                className={`nav-link ${isActive("/ajuda")}`}
+                to="/ajuda"
+                onClick={closeNav}
+              >
                 Ajuda
               </Link>
             </li>
@@ -64,6 +93,7 @@ const Navbar = () => {
               <Link
                 className={`nav-link ${isActive("/contato")}`}
                 to="/contato"
+                onClick={closeNav}
               >
                 Contato
               </Link>

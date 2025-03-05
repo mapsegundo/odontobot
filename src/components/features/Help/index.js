@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
 const Help = () => {
+  // Estados para controlar a expansão de cada accordion
+  const [accordion1Open, setAccordion1Open] = useState(false);
+  const [accordion2Open, setAccordion2Open] = useState(false);
+  const [accordion3Open, setAccordion3Open] = useState(false);
+
+  // Funções para alternar cada accordion
+  const toggleAccordion1 = () => setAccordion1Open(!accordion1Open);
+  const toggleAccordion2 = () => setAccordion2Open(!accordion2Open);
+  const toggleAccordion3 = () => setAccordion3Open(!accordion3Open);
+
   return (
     <div className="help-container">
       <div className="help-content">
@@ -67,11 +77,12 @@ const Help = () => {
             <div className="accordion-item">
               <h3 className="accordion-header" id="headingOne">
                 <button
-                  className="accordion-button collapsed"
+                  className={`accordion-button ${
+                    accordion1Open ? "" : "collapsed"
+                  }`}
                   type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
-                  aria-expanded="false"
+                  onClick={toggleAccordion1}
+                  aria-expanded={accordion1Open}
                   aria-controls="collapseOne"
                 >
                   Não estou recebendo resposta
@@ -79,9 +90,10 @@ const Help = () => {
               </h3>
               <div
                 id="collapseOne"
-                className="accordion-collapse collapse"
+                className={`accordion-collapse collapse ${
+                  accordion1Open ? "show" : ""
+                }`}
                 aria-labelledby="headingOne"
-                data-bs-parent="#helpAccordion"
               >
                 <div className="accordion-body">
                   Verifique sua conexão com a internet. Se o problema persistir,
@@ -94,11 +106,12 @@ const Help = () => {
             <div className="accordion-item">
               <h3 className="accordion-header" id="headingTwo">
                 <button
-                  className="accordion-button collapsed"
+                  className={`accordion-button ${
+                    accordion2Open ? "" : "collapsed"
+                  }`}
                   type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo"
-                  aria-expanded="false"
+                  onClick={toggleAccordion2}
+                  aria-expanded={accordion2Open}
                   aria-controls="collapseTwo"
                 >
                   A resposta está incompleta ou incorreta
@@ -106,9 +119,10 @@ const Help = () => {
               </h3>
               <div
                 id="collapseTwo"
-                className="accordion-collapse collapse"
+                className={`accordion-collapse collapse ${
+                  accordion2Open ? "show" : ""
+                }`}
                 aria-labelledby="headingTwo"
-                data-bs-parent="#helpAccordion"
               >
                 <div className="accordion-body">
                   Tente reformular sua pergunta com mais detalhes. O OdontoBot
@@ -121,11 +135,12 @@ const Help = () => {
             <div className="accordion-item">
               <h3 className="accordion-header" id="headingThree">
                 <button
-                  className="accordion-button collapsed"
+                  className={`accordion-button ${
+                    accordion3Open ? "" : "collapsed"
+                  }`}
                   type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseThree"
-                  aria-expanded="false"
+                  onClick={toggleAccordion3}
+                  aria-expanded={accordion3Open}
                   aria-controls="collapseThree"
                 >
                   Não consigo baixar o PDF
@@ -133,9 +148,10 @@ const Help = () => {
               </h3>
               <div
                 id="collapseThree"
-                className="accordion-collapse collapse"
+                className={`accordion-collapse collapse ${
+                  accordion3Open ? "show" : ""
+                }`}
                 aria-labelledby="headingThree"
-                data-bs-parent="#helpAccordion"
               >
                 <div className="accordion-body">
                   Certifique-se de que seu navegador não está bloqueando pop-ups
