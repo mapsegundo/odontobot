@@ -1,0 +1,110 @@
+.navbar {
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  max-width: var(--content-width-lg);
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.navbar-brand img {
+  transition: transform 0.3s ease;
+}
+
+.nav-link {
+  position: relative;
+  margin: 0 var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm) !important;
+  font-weight: 500;
+  color: var(--navbar-text) !important;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--navbar-active) !important;
+  background-color: rgba(44, 123, 229, 0.05);
+}
+
+.nav-link.active {
+  color: var(--navbar-active) !important;
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background-color: var(--navbar-active);
+  border-radius: 3px;
+}
+
+.btn-theme-toggle {
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: var(--spacing-sm);
+}
+
+.btn-theme-toggle:hover {
+  background-color: rgba(44, 123, 229, 0.1);
+  transform: rotate(15deg);
+}
+
+.btn-theme-toggle i {
+  font-size: 1.2rem;
+  color: var(--brand-primary);
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .navbar-collapse {
+    background-color: var(--bg-primary);
+    padding: var(--spacing-sm);
+    border-radius: 8px;
+    margin-top: var(--spacing-xs);
+    box-shadow: var(--shadow-md);
+  }
+
+  .nav-link.active::after {
+    width: 20px;
+  }
+
+  .nav-link {
+    padding: var(--spacing-xs) !important;
+  }
+
+  .btn-theme-toggle {
+    margin-left: 0;
+  }
+}

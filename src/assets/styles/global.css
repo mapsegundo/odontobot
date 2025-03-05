@@ -1,14 +1,70 @@
+/* Importar temas */
+@import "./themes/light.css";
+@import "./themes/dark.css";
+
 /* Estilos globais */
 :root {
-  --primary-color: #0d6efd;
-  --secondary-color: #6c757d;
-  --success-color: #198754;
-  --info-color: #0dcaf0;
-  --warning-color: #ffc107;
-  --danger-color: #dc3545;
-  --light-color: #f8f9fa;
-  --dark-color: #212529;
+  /* Definição padrão de variáveis, serão substituídas pelos temas */
   --font-family: "Roboto", sans-serif;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --brand-primary: #2c7be5; /* Azul principal */
+  --brand-secondary: #1a68d1; /* Azul secundário */
+  --accent: #0062cc;
+  --border-color: #dee2e6;
+
+  /* Sombras padronizadas */
+  --shadow-sm: 0 2px 5px rgba(44, 123, 229, 0.1);
+  --shadow-md: 0 2px 8px rgba(44, 123, 229, 0.2);
+  --shadow-lg: 0 4px 12px rgba(44, 123, 229, 0.3);
+  --shadow-focus: 0 0 0 3px rgba(44, 123, 229, 0.25);
+
+  /* Variáveis para inputs e navegação */
+  --input-bg: #ffffff;
+  --input-text: #212529;
+  --input-border: #ced4da;
+  --navbar-bg: #f8f9fa;
+  --navbar-text: #212529;
+  --navbar-active: #2c7be5;
+
+  /* Padronização de distâncias */
+  --spacing-xs: 0.5rem; /* 8px */
+  --spacing-sm: 1rem; /* 16px */
+  --spacing-md: 1.5rem; /* 24px */
+  --spacing-lg: 2rem; /* 32px */
+  --spacing-xl: 3rem; /* 48px */
+
+  /* Largura máxima de conteúdo */
+  --content-width-sm: 600px;
+  --content-width-md: 800px;
+  --content-width-lg: 1000px;
+  --content-width-xl: 1200px;
+}
+
+.dark-mode {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --text-primary: #f8f9fa;
+  --text-secondary: #d0d0d0;
+  --brand-primary: #2c7be5;
+  --brand-secondary: #1a68d1;
+  --accent: #2c7be5;
+  --border-color: #495057;
+
+  /* Sombras padronizadas para tema escuro */
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-focus: 0 0 0 3px rgba(44, 123, 229, 0.4);
+
+  --input-bg: #2d2d2d;
+  --input-text: #f8f9fa;
+  --input-border: #495057;
+  --navbar-bg: #1e1e1e;
+  --navbar-text: #f8f9fa;
+  --navbar-active: #2c7be5;
 }
 
 body {
@@ -16,7 +72,16 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: var(--light-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+/* Regra global para box-sizing em todos os elementos */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 .app-container {
@@ -29,30 +94,51 @@ main {
   flex: 1;
 }
 
+/* Container centralizado com largura máxima */
+.container-centered {
+  width: 100%;
+  max-width: var(--content-width-lg);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+/* Estilos da resposta do OdontoBot */
 .odonto {
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 8px;
-  background-color: #212529;
-  color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  padding: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  border-radius: 12px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-md);
 }
 
 .odonto h1 {
-  color: #0dcaf0;
+  color: var(--brand-primary);
   margin-bottom: 20px;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--brand-primary);
 }
 
 .odonto h2 {
-  color: #0dcaf0;
+  color: var(--brand-primary);
   margin-top: 25px;
   margin-bottom: 15px;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--brand-secondary);
+}
+
+.odonto h3 {
+  color: var(--brand-secondary);
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .odonto p {
   line-height: 1.6;
   margin-bottom: 15px;
-  color: white;
+  color: var(--response-text);
 }
 
 .odonto ul {
@@ -61,11 +147,11 @@ main {
 
 .odonto li {
   margin-bottom: 8px;
-  color: white;
+  color: var(--response-text);
 }
 
 .odonto a {
-  color: #0dcaf0;
+  color: var(--response-link);
   text-decoration: none;
 }
 
@@ -73,13 +159,182 @@ main {
   text-decoration: underline;
 }
 
+/* Inputs e botões com as variáveis de tema */
+.textareaInput {
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+  color: var(--input-text);
+}
+
+.textareaInput:focus {
+  border: 2px solid var(--brand-primary);
+  box-shadow: 0 0 0 0.2rem rgba(44, 123, 229, 0.25);
+}
+
+.saidaButton {
+  background-color: var(--button-primary-bg);
+  color: var(--button-primary-text);
+}
+
+.saidaButton:hover {
+  background-color: var(--button-primary-hover-bg);
+  color: var(--button-primary-text);
+}
+
+/* Navbar e Footer com as variáveis de tema */
+.navbar {
+  background-color: var(--navbar-bg) !important;
+  color: var(--navbar-text);
+  transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+  color: var(--navbar-text) !important;
+}
+
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+}
+
 /* Estilos responsivos */
 @media (max-width: 768px) {
   .container {
-    padding: 0 15px;
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+  }
+
+  .container-centered {
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
   }
 
   .odonto {
-    padding: 15px;
+    padding: var(--spacing-sm);
   }
+}
+
+/* Estilos específicos para tema escuro */
+.dark-mode .navbar {
+  background-color: var(--navbar-bg) !important;
+  color: var(--navbar-text);
+}
+
+.dark-mode .navbar-dark .navbar-nav .nav-link {
+  color: var(--navbar-text);
+}
+
+.dark-mode .navbar-dark .navbar-nav .nav-link.active {
+  color: var(--navbar-active) !important;
+}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border-color: var(--input-border);
+}
+
+.dark-mode .btn-theme-toggle {
+  color: var(--text-primary);
+}
+
+.dark-mode .btn-theme-toggle i {
+  color: var(--brand-primary);
+}
+
+/* Estilos gerais */
+.btn-primary {
+  background-color: var(--brand-primary);
+  border-color: var(--brand-primary);
+  box-shadow: 0 2px 4px rgba(44, 123, 229, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-secondary);
+  border-color: var(--brand-secondary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(44, 123, 229, 0.4);
+}
+
+.send-button {
+  background-color: var(--brand-primary) !important;
+  color: white;
+  box-shadow: 0 2px 4px rgba(44, 123, 229, 0.3) !important;
+}
+
+.send-button:hover:not(:disabled) {
+  background-color: var(--brand-secondary) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(44, 123, 229, 0.4) !important;
+}
+
+/* Fix para contrastes em menus escuros */
+.dropdown-menu {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+.dropdown-item {
+  color: var(--text-primary);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: rgba(13, 202, 240, 0.1);
+  color: var(--text-primary);
+}
+
+/* Ajustes para forms */
+input,
+textarea,
+select {
+  background-color: var(--input-bg) !important;
+  color: var(--input-text) !important;
+  border-color: var(--input-border) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-secondary) !important;
+  opacity: 0.7;
+}
+
+/* Define background para o app em tema escuro */
+.dark-mode .app-container {
+  background-color: var(--bg-primary);
+}
+
+/* Melhorando visibilidade de links */
+.dark-mode a {
+  color: var(--brand-primary);
+}
+
+.dark-mode a:hover {
+  color: var(--brand-secondary);
+}
+
+/* Corrigindo cores dos botões de navegação em carrosséis e outros componentes */
+.dark-mode .carousel-control-prev-icon,
+.dark-mode .carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* Ajuste para caixas modal em tema escuro */
+.dark-mode .modal-content {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* Ajustes para accordion */
+.dark-mode .accordion-button {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.dark-mode .accordion-button:not(.collapsed) {
+  background-color: rgba(13, 202, 240, 0.1);
+  color: var(--brand-primary);
 }

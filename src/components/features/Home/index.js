@@ -1,6 +1,4 @@
 import React from "react";
-import Navbar from "../../layout/Navbar";
-import Footer from "../../layout/Footer";
 import Chat from "../Chat";
 import DownloadButton from "../Export/DownloadButton";
 import { ToastContainer } from "react-toastify";
@@ -8,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useChatContext } from "../../../context/ChatContext";
 import { generatePDF } from "../../../utils/pdfUtils";
 import { toast } from "react-toastify";
+import "./styles.css";
 
 const Home = () => {
   const { currentResponse } = useChatContext();
@@ -25,28 +24,20 @@ const Home = () => {
   };
 
   return (
-    <>
-      <header>
-        <Navbar />
-      </header>
-      <main style={{ paddingTop: "150px", height: "100%" }}>
-        <div className="container">
-          <section className="text-center">
-            <h1 className="m-4">Precisa de ajuda?</h1>
-            <p className="pt-5">
-              Digite sua dúvida sobre Odontologia e o <b>OdontoBot</b> vai te
-              ajudar!
-            </p>
-          </section>
+    <div className="home-container">
+      <section className="text-center intro-section">
+        <h1 className="mb-4">Precisa de ajuda?</h1>
+        <p className="pt-4">
+          Digite sua dúvida sobre Odontologia e o <b>OdontoBot</b> vai te
+          ajudar!
+        </p>
+      </section>
 
-          <Chat />
+      <Chat />
 
-          {currentResponse && <DownloadButton downloadPDF={downloadPDF} />}
-        </div>
-      </main>
-      <Footer />
+      {currentResponse && <DownloadButton downloadPDF={downloadPDF} />}
       <ToastContainer />
-    </>
+    </div>
   );
 };
 

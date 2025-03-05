@@ -4,7 +4,6 @@ import ResponseDisplay from "./ResponseDisplay";
 import useOpenAI from "../../../hooks/useOpenAI";
 import { useChatContext } from "../../../context/ChatContext";
 import { toast } from "react-toastify";
-import "./Chat.css";
 
 const Chat = () => {
   const { isProcessing, saida, fetchResponse } = useOpenAI();

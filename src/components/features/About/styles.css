@@ -1,0 +1,117 @@
+.about-container {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-md);
+  min-height: 80vh;
+  width: 100%;
+}
+
+.about-content {
+  max-width: var(--content-width-md);
+  width: 100%;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.about-logo {
+  width: 60px;
+  height: 60px;
+  margin-right: var(--spacing-sm);
+}
+
+.about-intro h1 {
+  font-size: 2.2rem;
+  color: var(--brand-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.about-description {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+}
+
+.about-mission,
+.about-features,
+.about-disclaimer,
+.about-tech {
+  margin-bottom: var(--spacing-xl);
+}
+
+h2 {
+  color: var(--brand-primary);
+  font-size: 1.8rem;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 2px solid var(--brand-primary);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.feature-card {
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-md);
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-card h3 {
+  color: var(--brand-secondary);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.3rem;
+}
+
+.about-disclaimer {
+  background-color: rgba(255, 193, 7, 0.1);
+  padding: var(--spacing-md);
+  border-radius: 10px;
+  border-left: 4px solid #ffc107;
+}
+
+.dark-mode .about-disclaimer {
+  background-color: rgba(255, 193, 7, 0.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .about-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-logo {
+    margin-right: 0;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
