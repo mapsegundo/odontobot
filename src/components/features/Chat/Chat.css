@@ -81,6 +81,9 @@
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--brand-primary);
   font-weight: 600;
+  background-color: var(--navbar-bg);
+  padding: 0.5rem;
+  border-radius: 4px;
 }
 
 .odonto h2 {
@@ -91,6 +94,9 @@
   padding-bottom: 0.25rem;
   border-bottom: 1px solid var(--brand-secondary);
   font-weight: 500;
+  background-color: var(--navbar-bg);
+  padding: 0.5rem;
+  border-radius: 4px;
 }
 
 .odonto h3 {
@@ -99,9 +105,11 @@
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
   font-weight: 500;
+  background-color: var(--navbar-bg);
+  padding: 0.5rem;
+  border-radius: 4px;
 }
 
-/* Ajuste especial para o título de Conclusão */
 .odonto h1:last-of-type,
 .odonto h2:last-of-type {
   margin-top: 2.5rem;
@@ -225,6 +233,9 @@
 .dark-mode .odonto h2,
 .dark-mode .odonto h3 {
   color: #3a9bff;
+  background-color: var(--navbar-bg);
+  padding: 0.5rem;
+  border-radius: 4px;
 }
 
 .dark-mode .odonto h1 {
@@ -247,6 +258,25 @@
 .dark-mode .odonto td,
 .dark-mode .odonto th {
   border-color: #444;
+}
+
+.dark-mode .odonto p,
+.dark-mode .odonto ul,
+.dark-mode .odonto ol {
+  background-color: var(--navbar-bg);
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin: 0.75rem 0;
+}
+
+/* Aplicando background no tema claro */
+.odonto p,
+.odonto ul,
+.odonto ol {
+  background-color: var(--navbar-bg);
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin: 0.75rem 0;
 }
 
 /* Responsividade */
